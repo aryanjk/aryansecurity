@@ -1,4 +1,5 @@
 import React from 'react';
+import { kname } from '../../common/utils';
 
 const Contactus = () => {
     return (
@@ -28,7 +29,7 @@ const Contactus = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <div className="ms-3 fs-5 fw-semibold">
-                                    <a href="https://localhost:3000">https:/Shopify.com/</a>
+                                    <a href="http://localhost:3000">https:/{kname}.com/</a>
                                 </div>
                             </div>
                         </div>

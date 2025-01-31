@@ -1,0 +1,10 @@
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: " ";
+  color: white;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.681);
+}

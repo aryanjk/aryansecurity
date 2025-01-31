@@ -1,0 +1,147 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #8f6743;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-right: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-button {
+    padding: 0.5rem;
+    background-color: #fff;
+    border: none;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin: 0 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    /* Make the text bold */
+    font-size: 1.2rem;
+    /* Increase the size */
+}
+
+.nav-links a.active {
+    color: #ff6347;
+    /* Highlight color for the active link */
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+    min-width: 160px;
+    background-color: rgb(199, 135, 135);
+    border: 1px solid #da5353;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .search-input {
+        width: 85%;
+        margin-right: 0.5rem;
+    }
+
+    .search-button {
+        width: 10%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .navbar.show-nav-links .nav-links {
+        display: flex;
+    }
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}

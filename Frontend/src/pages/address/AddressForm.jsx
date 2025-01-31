@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -137,12 +137,12 @@ const AddressForm = () => {
   };
 
   return (
-    <div className="row">
-      <div className="d-flex container justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 className="h2">My Addresses</h1>
+    <div className='row'>
+      <div className='d-flex container justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
+        <h1 className='h2'>My Addresses</h1>
       </div>
 
-      <Modal show={isModalOpen} onHide={() => setIsModalOpen(false)}>
+      <Modal show={isModalOpen} onHide={() => setIsModalOpen(true)}>
         <Modal.Header closeButton>
           <Modal.Title>
             {editingAddressId ? "Edit Address" : "Add a New Address"}
@@ -150,95 +150,89 @@ const AddressForm = () => {
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formPhoneNumber" className="mb-3">
+            <Form.Group controlId='formPhoneNumber' className='mb-3'>
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
-                type="number"
-                name="phoneNumber"
-                placeholder="Enter phone number"
+                type='number'
+                name='phoneNumber'
+                placeholder='Enter phone number'
                 value={form.phoneNumber}
                 onChange={handleChange}
                 required
-                pattern="\d{10}"
+                pattern='\d{10}'
                 maxLength={10}
               />
             </Form.Group>
 
-            <Form.Group controlId="formCity" className="mb-3">
+            <Form.Group controlId='formCity' className='mb-3'>
               <Form.Label>City</Form.Label>
               <Form.Control
-                type="text"
-                name="city"
-                placeholder="Enter city"
+                type='text'
+                name='city'
+                placeholder='Enter city'
                 value={form.city}
                 onChange={handleChange}
                 required
               />
             </Form.Group>
-            <Form.Group controlId="formAddress" className="mb-3">
+            <Form.Group controlId='formAddress' className='mb-3'>
               <Form.Label>Address</Form.Label>
               <Form.Control
-                type="text"
-                name="address"
-                placeholder="Enter full address"
+                type='text'
+                name='address'
+                placeholder='Enter full address'
                 value={form.address}
                 onChange={handleChange}
                 required
               />
             </Form.Group>
-            <Form.Group controlId="formLandmark" className="mb-3">
+            <Form.Group controlId='formLandmark' className='mb-3'>
               <Form.Label>Landmark</Form.Label>
               <Form.Control
-                type="text"
-                name="landmark"
-                placeholder="Enter landmark"
+                type='text'
+                name='landmark'
+                placeholder='Enter landmark'
                 value={form.landmark}
                 onChange={handleChange}
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant='primary' type='submit'>
               {editingAddressId ? "Update Address" : "Save Address"}
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+          <Button variant='secondary' onClick={() => setIsModalOpen(false)}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
-      <div className="container">
+      <div className='container'>
         {addresses.length > 0 ? (
           addresses.map((address) => (
-            // <tr key={address._id}>
-            //   <td>{address.address}</td>
-            //   <td>{address.city}</td>
-            //   <td>{address.phoneNumber}</td>
-            //   <td>{address.landmark}</td>
-            //   <td>
 
-            <div className="row my-2 shadow p-2">
-              <div className="col-10  pt-2">
-                <p className="p-0 m-0">
+            <div className='row my-2 shadow p-2'>
+              <div className='col-10  pt-2'>
+                <p className='p-0 m-0'>
                   {address.phoneNumber}, {address.landmark}
                 </p>
-                <p className="p-0 m-0 mt-2">
+                <p className='p-0 m-0 mt-2'>
                   {address.address}, {address.city}
                 </p>
               </div>
 
-              <div className="d-flex flex-column justify-content-end gap-2 col-2">
+              <div className='d-flex flex-column justify-content-end gap-2 col-2'>
                 <Button
-                  variant="danger"
-                  className="btn btn-sm py-1 px-2"
+                  variant='danger'
+                  className='btn btn-sm py-1 px-2'
                   onClick={() => handleDelete(address._id)}
                 >
                   Delete
                 </Button>
                 <Button
-                  variant="primary"
-                  className="btn-sm"
+                  variant='primary'
+                  className='btn-sm'
                   onClick={() => handleUpdate(address)}
                 >
                   Edit
@@ -248,12 +242,12 @@ const AddressForm = () => {
           ))
         ) : (
           <tr>
-            <td colSpan="4">No addresses available</td>
+            <td colSpan='4'>No addresses available</td>
           </tr>
         )}
 
-        <div className=" w-100 mt-3 text-end">
-          <Button variant="danger" onClick={() => setIsModalOpen(true)}>
+        <div className=' w-100 mt-3 text-end'>
+          <Button variant='danger' onClick={() => setIsModalOpen(true)}>
             Add Address
           </Button>
         </div>

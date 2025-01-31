@@ -24,26 +24,6 @@ const SideNav = () => (
         </Link>
       </li>
       <li className='nav-item'>
-        <Link to='/reviews' className='nav-link'>
-          Reviews
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link to='admin/customers' className='nav-link'>
-          Customers
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link to='/transactions' className='nav-link'>
-          Transactions
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link to='/settings' className='nav-link'>
-          Settings
-        </Link>
-      </li>
-      <li className='nav-item'>
         <Link to='/profile' className='nav-link'>
           Profile
         </Link>
